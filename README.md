@@ -1,7 +1,4 @@
 # Astro Template: Major Tom
-
-![Astro](https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white)
-
 An opinionated Astro template with built-in support for Tailwind CSS, Prettier, and import aliases.
 
 ```sh
@@ -34,6 +31,8 @@ function New-AstroProject
         bunx create-astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict --no-install --git $ProjectName
         
         Set-Location $ProjectName
+        [void](New-Item -Name "components" -Path src -ItemType Directory)
+        [void](New-Item -Name "layouts" -Path src -ItemType Directory)
         Write-Host
         bun install --no-summary
         bunx prettier . --write --log-level silent
