@@ -28,17 +28,24 @@ function New-AstroProject
     if (!(Test-Path -Path "$Location\$ProjectName"))
     {
         Set-Location $Location
-        bunx create-astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict --no-install --git $ProjectName
+        npx create-astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict --no-install --git $ProjectName
         
-        Set-Location $ProjectName
-        [void](New-Item -Name "components" -Path src -ItemType Directory)
-        [void](New-Item -Name "layouts" -Path src -ItemType Directory)
-        Write-Host
-        bun install --no-summary
-        bunx prettier . --write --log-level silent
-        bunx prettier . --check
-        if (Get-Command code -ErrorAction SilentlyContinue) {code .}
-        if ($StartApp) {bun run dev}
+        if (Test-Path -Path $ProjectName)
+        {
+            Set-Location $ProjectName
+            [void](New-Item -Name "components" -Path src -ItemType Directory)
+            [void](New-Item -Name "layouts" -Path src -ItemType Directory)
+            Write-Host
+            bun install --no-summary
+            bunx prettier . --write --log-level silent
+            bunx prettier . --check
+            if (Get-Command code -ErrorAction SilentlyContinue) {code .}
+            if ($StartApp) {bun run dev}
+        }
+        else
+        {
+            Write-Host "`nProject folder ($ProjectName) was not created.  Operation cancelled...liftoff failed!"
+        }
     }
     else
     {
