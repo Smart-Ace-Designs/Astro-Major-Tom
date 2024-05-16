@@ -1,50 +1,40 @@
 ---
 import { Image } from "astro:assets";
+import MainLayout from "@/layouts/MainLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{`Major { } Tom`}</title>
-  </head>
-  <body>
-    <section
-      class="flex flex-col h-screen bg-slate-800 text-white bg-center bg-cover bg-blend-overlay bg-fixed bg-black/50"
-      style="background-image: url('https://source.unsplash.com/random/');"
-    >
-      <div class="flex items-center h-20">
+<MainLayout title="Major { } Tom">
+  <section class="flex flex-col h-screen bg-slate-800 text-white">
+    <div class="h-20 hidden md:flex items-center min-h-16">
+      <div
+        class="mx-auto relative px-5 max-w-screen-xl w-full flex items-center justify-end"
+      >
         <div
-          class="mx-auto relative px-5 max-w-screen-xl w-full flex items-center justify-end"
+          class="text-4xl font-light uppercase absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mt-6"
         >
-          <div
-            class="text-4xl font-light uppercase absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mt-10"
-          >
-            <span class="font-semibold text-yellow-600">Astro</span> | Tailwind CSS
-          </div>
+          <span class="font-semibold text-yellow-600">Astro</span> | Tailwind CSS
         </div>
       </div>
-      <div class="mx-auto mt-10">
-        <Image
-          src="/favicon.svg"
-          alt="astro"
-          height="100"
-          width="100"
-          loading={"eager"}
-        />
+    </div>
+    <div class="mx-auto mt-32 md:mt-12 min-h-48">
+      <Image
+        class="h-60 md:h-20 w-60 md:w-20"
+        src="/favicon.svg"
+        alt="astro"
+        height="100"
+        width="100"
+        loading={"eager"}
+      />
+    </div>
+    <div class="hidden md:flex md:flex-1 items-center -mt-20">
+      <div class="text-center mx-auto">
+        <h1 class="text-8xl font-semibold uppercase">
+          Major<span class="font-semibold text-yellow-600">{` { } `}</span>Tom
+        </h1>
+        <p class="font-light text-3xl mt-6">
+          Coding in a most <em>peculiar</em> way
+        </p>
       </div>
-      <div class="flex flex-1 items-center">
-        <div class="text-center mx-auto">
-          <h1 class="text-8xl font-semibold uppercase">
-            Major<span class="font-semibold text-yellow-600">{` { } `}</span>Tom
-          </h1>
-          <p class="font-light text-3xl mt-6">
-            Coding in a most <em>peculiar</em> way
-          </p>
-        </div>
-      </div>
-    </section>
-  </body>
-</html>
+    </div>
+  </section>
+</MainLayout>

@@ -34,7 +34,6 @@ function New-AstroProject
         {
             Set-Location $ProjectName
             [void](New-Item -Name "components" -Path src -ItemType Directory)
-            [void](New-Item -Name "layouts" -Path src -ItemType Directory)
             Write-Host
             bun install --no-summary
             bunx prettier . --write --log-level silent
