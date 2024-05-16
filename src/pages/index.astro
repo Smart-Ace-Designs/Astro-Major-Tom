@@ -1,5 +1,5 @@
 ---
-
+import { Image } from "astro:assets";
 ---
 
 <html lang="en">
@@ -22,16 +22,26 @@
           <div
             class="text-4xl font-light uppercase absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mt-10"
           >
-            Astro | Tailwind CSS
+            <span class="font-semibold text-yellow-600">Astro</span> | Tailwind CSS
           </div>
         </div>
       </div>
-
+      <div class="mx-auto mt-10">
+        <Image
+          src="/favicon.svg"
+          alt="astro"
+          height="100"
+          width="100"
+          loading={"eager"}
+        />
+      </div>
       <div class="flex flex-1 items-center">
         <div class="text-center mx-auto">
-          <h1 class="text-8xl font-semibold uppercase">{`Major { } Tom`}</h1>
-          <p class="font-light text-3xl mt-5">
-            Coding in a most peculiar way...
+          <h1 class="text-8xl font-semibold uppercase">
+            Major<span class="font-semibold text-yellow-600">{` { } `}</span>Tom
+          </h1>
+          <p class="font-light text-3xl mt-6">
+            Coding in a most <em>peculiar</em> way
           </p>
         </div>
       </div>
