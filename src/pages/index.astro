@@ -4,21 +4,21 @@ import MainLayout from "@/layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Major { } Tom">
-  <section class="flex flex-col h-screen bg-slate-800 text-white">
-    <div class="h-20 hidden md:flex items-center min-h-16">
+  <section class="flex h-screen flex-col bg-slate-800 text-white">
+    <div class="hidden h-20 min-h-16 items-center md:flex">
       <div
-        class="mx-auto relative px-5 max-w-screen-xl w-full flex items-center justify-end"
+        class="relative mx-auto flex w-full max-w-screen-xl items-center justify-end px-5"
       >
         <div
-          class="text-4xl font-light uppercase absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mt-6"
+          class="absolute left-1/2 top-1/2 mt-6 -translate-x-1/2 -translate-y-1/2 text-4xl font-light uppercase"
         >
           <span class="font-semibold text-yellow-600">Astro</span> | Tailwind CSS
         </div>
       </div>
     </div>
-    <div class="mx-auto mt-32 md:mt-12 min-h-48">
+    <div class="mx-auto mt-32 min-h-48 md:mt-12">
       <Image
-        class="h-60 md:h-20 w-60 md:w-20"
+        class="h-60 w-60 md:h-20 md:w-20"
         src="/favicon.svg"
         alt="astro"
         height="100"
@@ -26,12 +26,12 @@ import MainLayout from "@/layouts/MainLayout.astro";
         loading={"eager"}
       />
     </div>
-    <div class="hidden md:flex md:flex-1 items-center -mt-20">
-      <div class="text-center mx-auto">
+    <div class="-mt-20 hidden items-center md:flex md:flex-1">
+      <div class="mx-auto text-center">
         <h1 class="text-8xl font-semibold uppercase">
           Major<span class="font-semibold text-yellow-600">{` { } `}</span>Tom
         </h1>
-        <p class="font-light text-3xl mt-6">
+        <p class="mt-6 text-3xl font-light">
           Coding in a most <em>peculiar</em> way
         </p>
       </div>
