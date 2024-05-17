@@ -28,7 +28,7 @@ function New-AstroProject
     if (!(Test-Path -Path "$Location\$ProjectName"))
     {
         Set-Location $Location
-        npx create-astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict --no-install --git $ProjectName
+        bunx create-astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict --no-install --git $ProjectName
         
         if (Test-Path -Path $ProjectName)
         {
