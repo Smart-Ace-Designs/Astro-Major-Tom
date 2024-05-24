@@ -1,5 +1,6 @@
 # Astro Template: Major Tom
-An opinionated Astro template with built-in support for Tailwind CSS, Prettier, and import aliases.
+
+An opinionated Astro template with built-in support for Tailwind CSS, Prettier, view transitions, and import aliases.
 
 ```sh
 npm create astro@latest -- --template smart-ace-designs/astro-major-tom project-name
@@ -18,7 +19,7 @@ function New-AstroProject
         [Parameter(Mandatory = $true)] [string]$Location,
         [Parameter(Mandatory = $false)] [switch]$StartApp
     )
-        
+
     Clear-Host
     $Message = "Astro Deployment Tool"
     $Width = $Host.UI.RawUI.WindowSize.Width
@@ -29,7 +30,7 @@ function New-AstroProject
     {
         Set-Location $Location
         bunx create-astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict --no-install --git $ProjectName
-        
+
         if (Test-Path -Path $ProjectName)
         {
             Set-Location $ProjectName
@@ -52,6 +53,7 @@ function New-AstroProject
     }
 }
 ```
+
 ## Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
@@ -60,9 +62,17 @@ Inside of your Astro project, you'll see the following folders and files:
 /
 ├── public/
 ├── src/
-│   └── pages/
+|   ├── components
+|   ├── layouts
+│   ├── pages/
 │       └── index.astro
-└── package.json
+|   └── env.d.ts
+├── astro.config.mjs
+├── package.json
+├── README.md
+├── package.json
+├── tailwind.config.mjs
+└── tsconfig.json
 ```
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
