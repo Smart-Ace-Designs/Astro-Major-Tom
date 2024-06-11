@@ -68,16 +68,17 @@ Inside of your Astro project, you'll see the following folders and files:
 ```text
 /
 ├── public/
+│       └── favicon.svg
 ├── src/
-|   ├── components
-|   ├── layouts
+|   ├── layouts/
+│       └── MainLayout.astro
 │   ├── pages/
 │       └── index.astro
 |   └── env.d.ts
+├── .gitignore
 ├── astro.config.mjs
 ├── package.json
 ├── README.md
-├── package.json
 ├── tailwind.config.mjs
 └── tsconfig.json
 ```
