@@ -17,6 +17,7 @@ function New-AstroProject
     (
         [Parameter(Mandatory = $true)] [string]$ProjectName,
         [Parameter(Mandatory = $true)] [string]$Location,
+        [Parameter(Mandatory = $false)] [switch]$StartCode,
         [Parameter(Mandatory = $false)] [switch]$StartApp
     )
 
@@ -42,7 +43,9 @@ function New-AstroProject
             Write-Host
             bunx prettier . --write --log-level silent
             bunx prettier . --check
-            if (Get-Command code -ErrorAction SilentlyContinue) {code .}
+            if ($StartCode -and (Get-Command code -ErrorAction SilentlyContinue)) {code .}
+            Write-Host
+            Write-Host ("=" * $Width)
             if ($StartApp) {bun run dev}
         }
         else
