@@ -37,6 +37,9 @@ function New-AstroProject
             [void](New-Item -Name "components" -Path src -ItemType Directory)
             Write-Host
             bun install --no-summary
+            bunx @astrojs/upgrade
+            bun update prettier --silent
+            Write-Host
             bunx prettier . --write --log-level silent
             bunx prettier . --check
             if (Get-Command code -ErrorAction SilentlyContinue) {code .}
