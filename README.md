@@ -59,7 +59,7 @@ function New-AstroProject
     }
 }
 ```
-https://github.com/Smart-Ace-Designs/Astro-Major-Tom/assets/132539186/0bf1c8e6-b207-41b7-8891-5256f0acacc2
+https://github.com/Smart-Ace-Designs/Astro-Major-Tom/assets/132539186/7d31d752-f728-49bb-a1cf-8c3708d05482
 
 ## Project Structure
 
