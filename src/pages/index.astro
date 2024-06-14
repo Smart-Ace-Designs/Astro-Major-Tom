@@ -4,8 +4,8 @@ import MainLayout from "@/layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Major { } Tom">
-  <div class="flex h-screen flex-col">
-    <div class="mx-auto mt-32 min-h-48 md:mt-2">
+  <div class="flex h-[85vh] flex-col">
+    <div class="mx-auto mt-32 min-h-44 md:mt-2">
       <Image
         class="h-60 w-60 md:h-20 md:w-20"
         src="/favicon.svg"
@@ -15,7 +15,7 @@ import MainLayout from "@/layouts/MainLayout.astro";
         loading={"eager"}
       />
     </div>
-    <div class="-mt-20 hidden items-center md:flex md:flex-1">
+    <div class="hidden items-center md:flex md:flex-1">
       <div class="mx-auto text-center">
         <h1 class="text-8xl font-semibold uppercase">
           Major<span class="font-semibold text-yellow-600">{` { } `}</span>Tom
