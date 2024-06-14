@@ -1,6 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions";
-
 interface Props {
   title?: string;
 }
@@ -14,7 +12,11 @@ const { title = "Astro" } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <ViewTransitions />
+    <style>
+      @view-transition {
+        navigation: auto; /* enabled */
+      }
+    </style>
   </head>
   <body>
     <slot />
