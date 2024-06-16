@@ -8,7 +8,6 @@ npm create astro@latest -- --template smart-ace-designs/astro-major-tom project-
 
 ```powershell
 # Example function to provide more granular control of deploying a new Astro project with this template using bun and npm.
-# Currently bun is unable to create a new Astro project and npm must be used in the interim until this is resolved.
 # Add to your PowerShell profile or custom PowerShell module.
 
 function New-AstroProject
@@ -19,8 +18,15 @@ function New-AstroProject
         [Parameter(Mandatory = $true)] [string]$ProjectName,
         [Parameter(Mandatory = $true)] [string]$Location,
         [Parameter(Mandatory = $false)] [switch]$StartCode,
-        [Parameter(Mandatory = $false)] [switch]$StartApp
+        [Parameter(Mandatory = $false)] [switch]$StartApp,
+        [Parameter(Mandatory = $false)] [ValidateSet("bun", "npm")] [string]$PackageManager = "bun",
     )
+
+    switch ($PackageManager)
+    {
+        "bun" {$PMX = "bunx"}
+        "npm" {$PMX = "npx"}
+    }
 
     Clear-Host
     $Message = "Astro Deployment Tool"
@@ -31,6 +37,8 @@ function New-AstroProject
     if (!(Test-Path -Path "$Location\$ProjectName"))
     {
         Set-Location $Location
+        # Currently bunx is unable to create a new Astro project and npx must be used in the interim until this is resolved.
+        # & $PMX create-astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict --no-install --no-git $ProjectName
         npx create-astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict --no-install --git $ProjectName
 
         if (Test-Path -Path $ProjectName)
@@ -38,16 +46,20 @@ function New-AstroProject
             Set-Location $ProjectName
             [void](New-Item -Name "components" -Path src -ItemType Directory)
             Write-Host
-            bun install --no-summary
-            bunx @astrojs/upgrade
-            bun update prettier --silent
+            switch ($PackageManager)
+            {
+                "bun" {& $PackageManager install --no-summary}
+                "npm" {& $PackageManager install --silent}
+            }
+            & $PMX @astrojs/upgrade
+            & $PackageManager update prettier --silent
             Write-Host
-            bunx prettier . --write --log-level silent
-            bunx prettier . --check
+            & $PMX prettier . --write --log-level silent
+            & $PMX prettier . --check
             if ($StartCode -and (Get-Command code -ErrorAction SilentlyContinue)) {code .}
             Write-Host
             Write-Host ("=" * $Width)
-            if ($StartApp) {bun run dev}
+            if ($StartApp) {& $PackageManager run dev}
         }
         else
         {
