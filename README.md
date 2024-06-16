@@ -7,7 +7,8 @@ npm create astro@latest -- --template smart-ace-designs/astro-major-tom project-
 ```
 
 ```powershell
-# Example function to provide more granular control of deploying a new Astro project with this template using Bun.
+# Example function to provide more granular control of deploying a new Astro project with this template using bun and npm.
+# Currently bun is unable to create a new Astro project and npm must be used in the interim until this is resolved.
 # Add to your PowerShell profile or custom PowerShell module.
 
 function New-AstroProject
@@ -67,6 +68,10 @@ Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
+├── .vscode/
+│       └── extensions.json
+│       └── launch.json
+│       └── settings.json
 ├── public/
 │       └── favicon.svg
 ├── src/
