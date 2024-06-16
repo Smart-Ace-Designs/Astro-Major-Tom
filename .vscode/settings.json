@@ -2,5 +2,8 @@
   "files.associations": {
     "*.css": "tailwindcss",
     "*.scss": "tailwindcss"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
