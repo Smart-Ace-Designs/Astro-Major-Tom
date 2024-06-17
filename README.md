@@ -7,7 +7,7 @@ npm create astro@latest -- --template smart-ace-designs/astro-major-tom project-
 ```
 
 ```powershell
-# Example function to provide more granular control of deploying a new Astro project with this template using bun and npm.
+# Example PowerShell function to provide more granular control of deploying a new Astro project with this template using bun or npm.
 # Add to your PowerShell profile or custom PowerShell module.
 
 function New-AstroProject
@@ -53,6 +53,8 @@ function New-AstroProject
             }
             & $PMX @astrojs/upgrade
             & $PackageManager update prettier --silent
+            & $PackageManager update prettier-plugin-astro --silent
+            & $PackageManager update prettier-plugin-tailwindcss --silent
             Write-Host
             & $PMX prettier . --write --log-level silent
             & $PMX prettier . --check
