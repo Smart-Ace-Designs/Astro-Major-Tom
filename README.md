@@ -52,6 +52,7 @@ function New-AstroProject
                 "npm" {& $PackageManager install --silent}
             }
             & $PMX @astrojs/upgrade
+            & $PackageManager update tailwindcss --silent
             & $PackageManager update prettier --silent
             & $PackageManager update prettier-plugin-astro --silent
             & $PackageManager update prettier-plugin-tailwindcss --silent
