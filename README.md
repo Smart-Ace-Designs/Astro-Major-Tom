@@ -45,6 +45,7 @@ function New-AstroProject
         {
             Set-Location $ProjectName
             [void](New-Item -Name "components" -Path src -ItemType Directory)
+            [void](New-Item -Name "assets" -Path src -ItemType Directory)
             Write-Host
             switch ($PackageManager)
             {
@@ -91,8 +92,11 @@ Inside of your Astro project, you'll see the following folders and files:
 │       └── MainLayout.astro
 │   ├── pages/
 │       └── index.astro
+|   ├── styles/
+│       └── styles.css
 |   └── env.d.ts
 ├── .gitignore
+├── .prettierrc.mjs
 ├── astro.config.mjs
 ├── package.json
 ├── README.md
@@ -121,4 +125,4 @@ All commands are run from the root of the project, from a terminal:
 
 ## Additional Information
 
-Feel free to check the official [Astro documentation](https://docs.astro.build) or jump into the official [Astro Discord server](https://astro.build/chat).
+Please check the official [Astro documentation](https://docs.astro.build) or jump into the official [Astro Discord server](https://astro.build/chat).
