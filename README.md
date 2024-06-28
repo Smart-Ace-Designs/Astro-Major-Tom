@@ -37,9 +37,7 @@ function New-AstroProject
     if (!(Test-Path -Path "$Location\$ProjectName"))
     {
         Set-Location $Location
-        # Currently bunx is unable to create a new Astro project and npx must be used in the interim until this is resolved.
-        # & $PMX create-astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict --no-install --no-git $ProjectName
-        npx create-astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict --no-install --git $ProjectName
+        & $PMX create-astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict --no-install --no-git $ProjectName
 
         if (Test-Path -Path $ProjectName)
         {
@@ -64,12 +62,13 @@ function New-AstroProject
         }
         else
         {
-            Write-Host "`nProject folder ($ProjectName) was not created.  Operation cancelled...liftoff failed!"
+            Write-Host "`nProject folder ($ProjectName) was not created.`nOperation cancelled...liftoff failed!"
+            Write-Host "`n`nIf using Bun, please run `"bun pm cache rm`" to clear the bunx cache and then try again."
         }
     }
     else
     {
-        Write-Host "`nProject folder ($ProjectName) already exists.  Operation cancelled...liftoff failed!"
+        Write-Host "`nProject folder ($ProjectName) already exists.`nOperation cancelled...liftoff failed!"
     }
 }
 ```
