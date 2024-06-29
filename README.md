@@ -37,7 +37,7 @@ function New-AstroProject
     if (!(Test-Path -Path "$Location\$ProjectName"))
     {
         Set-Location $Location
-        & $PMX create-astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict --no-install --no-git $ProjectName
+        & $PMX create-astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict --no-install $ProjectName
 
         if (Test-Path -Path $ProjectName)
         {
@@ -51,8 +51,9 @@ function New-AstroProject
                 "npm" {& $PackageManager install --silent}
             }
             & $PMX @astrojs/upgrade
-            & $PackageManager update tailwindcss prettier prettier-plugin-astro prettier-plugin-tailwindcss --silent
+            & $PackageManager update --silent --save
             Write-Host
+            Clear-Content -Path "README.md"
             & $PMX prettier . --write --log-level silent
             & $PMX prettier . --check
             if ($StartCode -and (Get-Command code -ErrorAction SilentlyContinue)) {code .}
@@ -63,7 +64,7 @@ function New-AstroProject
         else
         {
             Write-Host "`nProject folder ($ProjectName) was not created.`nOperation cancelled...liftoff failed!"
-            Write-Host "`n`nIf using Bun, please run `"bun pm cache rm`" to clear the bunx cache and then try again."
+            Write-Host "`n`nIf using Bun please run `"bun pm cache rm`" to clear the cache and try again."
         }
     }
     else
