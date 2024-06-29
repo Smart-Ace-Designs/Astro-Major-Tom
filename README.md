@@ -37,7 +37,7 @@ function New-AstroProject
     if (!(Test-Path -Path "$Location\$ProjectName"))
     {
         Set-Location $Location
-        & $PMX create-astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict --no-install $ProjectName
+        & $PMX create-astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict --git --no-install $ProjectName
 
         if (Test-Path -Path $ProjectName)
         {
