@@ -7,10 +7,14 @@ npm create astro@latest -- --template smart-ace-designs/astro-major-tom project-
 ```
 
 ```powershell
-# Example PowerShell function to provide more granular control of deploying a new Astro project with this template using bun or npm.
-# Add to your PowerShell profile or custom PowerShell module.
+<#
+Example PowerShell function to provide more granular control of deploying a new Astro project with this template using
+bun or npm.
 
-function New-AstroProject
+Add to your PowerShell profile or custom PowerShell module.
+#>
+
+function New-AstroMajorTomProject
 {
     [CmdletBinding()]
     Param
@@ -24,8 +28,8 @@ function New-AstroProject
 
     switch ($PackageManager)
     {
-        "bun" {$PMX = "bunx"}
-        "npm" {$PMX = "npx"}
+        "bun" {$PackageManagerX = "bunx"}
+        "npm" {$PackageManagerX = "npx"}
     }
 
     Clear-Host
@@ -34,28 +38,33 @@ function New-AstroProject
     Write-Host
     Write-Host ((" " * ($Width - $Message.Length)) + $Message) -ForegroundColor Green
     Write-Host ("=" * $Width)
+
     if (!(Test-Path -Path "$Location\$ProjectName"))
     {
         Set-Location $Location
-        & $PMX create-astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict --git --no-install $ProjectName
+        & $PackageManagerX create-astro@latest -- --template smart-ace-designs/astro-major-tom `
+            --typescript strict --git --no-install $ProjectName
 
         if (Test-Path -Path $ProjectName)
         {
             Set-Location $ProjectName
             [void](New-Item -Name "components" -Path src -ItemType Directory)
             [void](New-Item -Name "assets" -Path src -ItemType Directory)
-            Write-Host
+            
             switch ($PackageManager)
             {
                 "bun" {& $PackageManager install --no-summary}
                 "npm" {& $PackageManager install --silent}
             }
-            & $PMX @astrojs/upgrade
-            & $PackageManager update --silent --save
+
             Write-Host
+            & $PackageManagerX @astrojs/upgrade
+            & $PackageManager update --silent --save
             Clear-Content -Path "README.md"
-            & $PMX prettier . --write --log-level silent
-            & $PMX prettier . --check
+
+            Write-Host
+            & $PackageManagerX prettier . --write --log-level silent
+            & $PackageManagerX prettier . --check
             if ($StartCode -and (Get-Command code -ErrorAction SilentlyContinue)) {code .}
             Write-Host
             Write-Host ("=" * $Width)
