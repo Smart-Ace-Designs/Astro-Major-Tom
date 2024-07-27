@@ -3,7 +3,7 @@
 An opinionated Astro template with built-in support for Tailwind CSS, Prettier, view transitions, and import aliases.
 
 ```sh
-npm create astro@latest -- --template smart-ace-designs/astro-major-tom project-name
+npm create astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict project-name
 ```
 
 ```powershell
