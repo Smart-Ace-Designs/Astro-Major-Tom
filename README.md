@@ -23,7 +23,7 @@ function New-AstroMajorTomProject
         [Parameter(Mandatory = $true)] [string]$Location,
         [Parameter(Mandatory = $false)] [switch]$StartCode,
         [Parameter(Mandatory = $false)] [switch]$StartApp,
-        [Parameter(Mandatory = $false)] [ValidateSet("bun", "npm")] [string]$PackageManager = "bun",
+        [Parameter(Mandatory = $false)] [ValidateSet("bun", "npm")] [string]$PackageManager = "bun"
     )
 
     switch ($PackageManager)
