@@ -51,13 +51,13 @@ function New-AstroMajorTomProject
             [void](New-Item -Name "components" -Path src -ItemType Directory)
             [void](New-Item -Name "assets" -Path src -ItemType Directory)
             
+            Write-Host
             switch ($PackageManager)
             {
                 "bun" {& $PackageManager install --no-summary}
                 "npm" {& $PackageManager install --silent}
             }
 
-            Write-Host
             & $PackageManagerX @astrojs/upgrade
             & $PackageManager update --silent --save
             Clear-Content -Path "README.md"
