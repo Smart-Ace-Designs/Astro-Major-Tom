@@ -20,14 +20,7 @@ const { title = "Astro" } = Astro.props;
       }
     </style>
   </head>
-  <body class="bg-slate-800 text-white">
-    <header class="hidden items-center md:flex">
-      <div class="mx-auto flex w-full max-w-screen-xl">
-        <div class="mx-auto my-8 text-4xl font-light uppercase">
-          <span class="font-semibold text-yellow-600">Astro</span> | Tailwind CSS
-        </div>
-      </div>
-    </header>
+  <body>
     <slot />
   </body>
 </html>
