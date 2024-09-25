@@ -95,6 +95,9 @@ Inside of your Astro project you will see the following folders and files:
 ├── public/
 │       └── favicon.svg
 ├── src/
+|   ├── assets/
+|   ├── components/
+│       └── AstroWelcome.astro
 |   ├── layouts/
 │       └── MainLayout.astro
 │   ├── pages/
