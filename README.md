@@ -80,7 +80,7 @@ function New-AstroMajorTomProject
     if ($StartApp) {& $PackageManager run dev}
 }
 ```
-https://github.com/Smart-Ace-Designs/Astro-Major-Tom/assets/132539186/7d31d752-f728-49bb-a1cf-8c3708d05482
+https://github.com/user-attachments/assets/04b734fa-3d49-4e18-952a-cc111c064fb7
 
 ## Project Structure
 
