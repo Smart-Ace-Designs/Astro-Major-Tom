@@ -1,19 +1,19 @@
 # Astro Template: Major Tom
 
-An opinionated Astro template with built-in support for Tailwind CSS, Prettier, view transitions, and import aliases.
+An opinionated Astro starter template with built-in support for Tailwind CSS, Prettier, view transitions, and import aliases.
 
+## Deployment Methods
+### bun
+```sh
+bun create astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict project-name
+```
+### npm
 ```sh
 npm create astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict project-name
 ```
-
+### PowerShell
+Add this function to your PowerShell profile or a PowerShell module:
 ```powershell
-<#
-Example PowerShell function to provide more granular control of deploying a new Astro project from
-this template.
-
-Add this function to your PowerShell profile or a PowerShell module.
-#>
-
 function New-AstroMajorTomProject
 {
     [CmdletBinding()]
@@ -113,6 +113,3 @@ Inside of your Astro project you will see the following folders and files:
 └── tsconfig.json
 ```
 
-## Additional Information
-
-Please check the official [Astro documentation](https://docs.astro.build) or jump into the official [Astro Discord server](https://astro.build/chat).
