@@ -8,11 +8,11 @@ An opinionated Astro starter template with built-in support for Tailwind CSS, Pr
 > It is recommended to install `Node.js` even if `bun` is used exclusively.
 ### bun
 ```sh
-bun create astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict project-name
+bun create astro@latest -- --template smart-ace-designs/astro-major-tom project-name
 ```
 ### npm
 ```sh
-npm create astro@latest -- --template smart-ace-designs/astro-major-tom --typescript strict project-name
+npm create astro@latest -- --template smart-ace-designs/astro-major-tom project-name
 ```
 ### PowerShell
 Add this function to your PowerShell profile or a PowerShell module:
@@ -51,7 +51,7 @@ function New-AstroMajorTomProject
 
     Set-Location $Location
     & $PackageManagerX create-astro@latest -- --template smart-ace-designs/astro-major-tom `
-        --typescript strict --git --no-install $ProjectName
+        --git --no-install $ProjectName
 
     if (!(Test-Path -Path $ProjectName))
     {
