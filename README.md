@@ -106,7 +106,6 @@ Inside of your Astro project you will see the following folders and files:
 │       └── index.astro
 |   ├── styles/
 │       └── styles.css
-|   └── env.d.ts
 ├── .gitignore
 ├── .prettierrc.mjs
 ├── astro.config.mjs
