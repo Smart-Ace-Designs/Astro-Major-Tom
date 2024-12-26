@@ -14,7 +14,7 @@ The template includes:
 - Default `.vscode` files to properly handle Tailwind CSS, recommended extensions, and default Prettier formatters
 - A starter component to showcase Tailwind CSS
 
-The PowerShell function provides:
+The PowerShell function:
 - Creates an additional empty folder: `Assets`
 - Blanks out the `README.md` file
 - Runs `astro update` to update the core Astro packages to the latest versions and your preferred package manager (npm or bun) to update the other non-Astro core packages
