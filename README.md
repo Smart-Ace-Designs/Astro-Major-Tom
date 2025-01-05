@@ -103,7 +103,7 @@ function New-AstroMajorTomProject
     if ($StartApp) {& $PackageManager run dev}
 }
 ```
-https://github.com/user-attachments/assets/64f1eac7-4918-41c3-be53-05ac5ca68f74
+https://github.com/user-attachments/assets/62ed70b8-ec3b-4125-979f-c1986633afaa
 
 ## Project Structure
 
