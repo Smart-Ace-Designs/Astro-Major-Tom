@@ -20,7 +20,7 @@ The PowerShell function:
 - Runs `astro update` to update the core Astro packages to the latest versions and runs your preferred package manager (npm or bun) to update the other packages
 - Runs the `prettier` CLI to provide an intial format of all project files
 - Automatically navigates to the project folder and peforms an initial install
-- Provides an option to launch the site post deployment and/or open the project folder with VS Code
+- Provides an option to launch the site and/or open the project folder with VS Code post deployment
 
 
 ## Deployment Methods
@@ -125,7 +125,7 @@ Inside of your Astro project you will see the following folders and files:
 │   ├── pages/
 │       └── index.astro
 |   ├── styles/
-│       └── styles.css
+│       └── global.css
 ├── .gitignore
 ├── .prettierrc.mjs
 ├── astro.config.mjs
@@ -135,3 +135,31 @@ Inside of your Astro project you will see the following folders and files:
 └── tsconfig.json
 ```
 
+When deployed with the custom `New-AstroSpaceProject` PowerShell function, you will see the following folders and files:
+
+```text
+/
+├── .vscode/
+│       └── extensions.json
+│       └── launch.json
+│       └── settings.json
+├── public/
+│       └── favicon.svg
+├── src/
+|   ├── assets/
+|   ├── components/
+│       └── AstroWelcome.astro
+|   ├── layouts/
+│       └── MainLayout.astro
+│   ├── pages/
+│       └── index.astro
+|   ├── styles/
+│       └── global.css
+├── .gitignore
+├── .prettierrc.mjs
+├── astro.config.mjs
+├── package.json
+├── README.md
+├── tailwind.config.mjs
+└── tsconfig.json
+```
