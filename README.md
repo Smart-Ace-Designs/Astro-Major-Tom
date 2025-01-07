@@ -37,15 +37,16 @@ npm create astro@latest -- --template smart-ace-designs/astro-major-tom project-
 ### PowerShell
 Add this function to your PowerShell profile or a PowerShell module:
 ```powershell
-function New-AstroMajorTomProject
+function New-AstroProject
 {
     [CmdletBinding()]
     Param
     (
         [Parameter(Mandatory = $true)] [string]$ProjectName,
         [Parameter(Mandatory = $true)] [string]$Location,
-        [Parameter(Mandatory = $false)] [switch]$StartCode,
+        [Parameter(Mandatory = $true)] [ValidateSet("astro-major-tom", "astro-moonbase", "astro-space")] [string]$Template,
         [Parameter(Mandatory = $false)] [switch]$StartApp,
+        [Parameter(Mandatory = $false)] [switch]$StartCode,
         [Parameter(Mandatory = $false)] [ValidateSet("bun", "npm")] [string]$PackageManager = "bun"
     )
 
@@ -70,7 +71,7 @@ function New-AstroMajorTomProject
     }
 
     Set-Location $Location
-    & $PackageManagerX create-astro@latest -- --template smart-ace-designs/astro-major-tom `
+    & $PackageManagerX create-astro@latest -- --template smart-ace-designs/$($Template) `
         --git --no-install $ProjectName
 
     if (!(Test-Path -Path $ProjectName))
@@ -88,10 +89,12 @@ function New-AstroMajorTomProject
         "bun" {& $PackageManager install --no-summary}
         "npm" {& $PackageManager install --silent}
     }
+
     & $PackageManagerX @astrojs/upgrade
     & $PackageManager update --silent --save
 
-    [void](New-Item -Name "assets" -Path src -ItemType Directory)
+    if (!(Test-Path -Path "src/components")) {[void](New-Item -Name "components" -Path src -ItemType Directory)}
+    if (!(Test-Path -Path "src/assets")) {[void](New-Item -Name "assets" -Path src -ItemType Directory)}
     Clear-Content -Path "README.md"
 
     Write-Host
@@ -102,6 +105,10 @@ function New-AstroMajorTomProject
     Write-Host ("=" * $Width)
     if ($StartApp) {& $PackageManager run dev}
 }
+```
+
+```sh
+New-AstroProject -ProjectName project-name -Location project-parent-folder -Template astro-major-tom
 ```
 https://github.com/user-attachments/assets/62ed70b8-ec3b-4125-979f-c1986633afaa
 
@@ -135,7 +142,7 @@ Inside of your Astro project you will see the following folders and files:
 └── tsconfig.json
 ```
 
-When deployed with the custom `New-AstroMajorTomProject` PowerShell function, you will see the following folders and files:
+When deployed with the custom `New-AstroProject` PowerShell function, you will see the following folders and files:
 
 ```text
 /
