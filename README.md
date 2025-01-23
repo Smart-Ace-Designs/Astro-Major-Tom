@@ -2,7 +2,7 @@
 
 **Major Tom** is an opinionated Astro 5 starter template with built-in support for Tailwind CSS, Prettier, view transitions, and import aliases and includes a basic starter component.
 
-Using `bunx create-astro@latest` or `npm create astro@latest` provides everything you need to create a basic Astro application. However, it is missing a few useful items that I found myself manually adding to every Astro project I created.  To address this problem, I created this template to automatically include these items. Additionally, a custom PowerShell function was created to deploy this template and provide some additional functionality that the template cannot.
+Using `bunx create-astro@latest` or `npx create-astro@latest` provides everything you need to create a basic Astro application. However, it is missing a few useful items that I found myself manually adding to every Astro project I created.  To address this problem, I created this template to automatically include these items. Additionally, a custom PowerShell function was created to deploy this template and provide some additional functionality that the template cannot.
 
 The template includes:
 - [Tailwind CSS (v3)](https://tailwindcss.com/)
@@ -13,7 +13,7 @@ The template includes:
 - A default _global.css_ file
 - Default _.vscode_ files to properly handle Tailwind CSS, recommended extensions, and default Prettier formatters
 - A starter component to showcase Tailwind CSS
-- Changes the `dev` script to `"astro dev --open"`
+- The `dev` script set to `"astro dev --open"`
 
 The PowerShell function:
 - Creates an additional empty folder: _assets_
