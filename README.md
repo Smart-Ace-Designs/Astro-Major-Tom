@@ -5,7 +5,7 @@
 Using `bunx create-astro@latest` or `npx create-astro@latest` provides everything you need to create a basic Astro application. However, it is missing a few useful items that I found myself manually adding to every Astro project I created.  To address this problem, I created this template to automatically include these items. Additionally, a custom PowerShell function was created to deploy this template and provide some additional functionality that the template cannot.
 
 The template includes:
-- [Tailwind CSS (v3)](https://tailwindcss.com/)
+- [Tailwind CSS v4.0)](https://tailwindcss.com/)
 - [Prettier](https://prettier.io/)
 - Astro [View Transitions](https://docs.astro.build/en/guides/view-transitions/)
 - Astro [Import Aliases](https://docs.astro.build/en/guides/typescript/#import-aliases)
@@ -141,7 +141,6 @@ Inside of your Astro project you will see the following folders and files:
 ├── astro.config.mjs
 ├── package.json
 ├── README.md
-├── tailwind.config.mjs
 └── tsconfig.json
 ```
 
@@ -170,6 +169,5 @@ When deployed with the custom `New-AstroProject` PowerShell function, you will s
 ├── astro.config.mjs
 ├── package.json
 ├── README.md
-├── tailwind.config.mjs
 └── tsconfig.json
 ```
