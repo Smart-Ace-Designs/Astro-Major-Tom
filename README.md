@@ -45,7 +45,7 @@ function New-AstroProject
     (
         [Parameter(Mandatory = $true)] [string]$ProjectName,
         [Parameter(Mandatory = $true)] [string]$Location,
-        [Parameter(Mandatory = $true)] [ValidateSet("astro-major-tom", "astro-moonbase", "astro-space")] [string]$Template,
+        [Parameter(Mandatory = $true)] [ValidateSet("astro-major-tom", "astro-moonbase", "astro-space", "astro-starbreeze")] [string]$Template,
         [Parameter(Mandatory = $false)] [switch]$StartApp,
         [Parameter(Mandatory = $false)] [switch]$StartCode,
         [Parameter(Mandatory = $false)] [ValidateSet("bun", "npm")] [string]$PackageManager = "bun"
