@@ -45,10 +45,18 @@ function New-AstroProject
     (
         [Parameter(Mandatory = $true)] [string]$ProjectName,
         [Parameter(Mandatory = $true)] [string]$Location,
-        [Parameter(Mandatory = $true)] [ValidateSet("astro-major-tom", "astro-moonbase", "astro-space", "astro-starbreeze")] [string]$Template,
+        [Parameter(Mandatory = $true)] [ValidateSet(
+            "astro-major-tom",
+            "astro-moonbase",
+            "astro-space",
+            "astro-starbreeze"
+        )] [string]$Template,
         [Parameter(Mandatory = $false)] [switch]$StartApp,
         [Parameter(Mandatory = $false)] [switch]$StartCode,
-        [Parameter(Mandatory = $false)] [ValidateSet("bun", "npm")] [string]$PackageManager = "bun"
+        [Parameter(Mandatory = $false)] [ValidateSet(
+            "bun",
+            "npm"
+        )] [string]$PackageManager = "bun"
     )
 
     switch ($PackageManager)
@@ -94,8 +102,14 @@ function New-AstroProject
     & $PackageManagerX @astrojs/upgrade
     & $PackageManager update --silent --save
 
-    if (!(Test-Path -Path "src/components")) {[void](New-Item -Name "components" -Path src -ItemType Directory)}
-    if (!(Test-Path -Path "src/assets")) {[void](New-Item -Name "assets" -Path src -ItemType Directory)}
+    if (!(Test-Path -Path "src/components"))
+    {
+        [void](New-Item -Name "components" -Path src -ItemType Directory)
+    }
+    if (!(Test-Path -Path "src/assets"))
+    {
+        [void](New-Item -Name "assets" -Path src -ItemType Directory)
+    }
     Clear-Content -Path "README.md"
 
     Write-Host
