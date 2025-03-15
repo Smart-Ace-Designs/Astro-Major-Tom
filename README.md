@@ -123,7 +123,7 @@ function New-AstroProject
 ```
 
 ```sh
-New-AstroProject -ProjectName project-name -Location project-parent-folder -Template astro-major-tom
+New-AstroProject -ProjectName project-name -Location parent-folder -Template astro-major-tom
 ```
 https://github.com/user-attachments/assets/0a5886fd-34a7-4409-99d6-a056329f1d4c
 
