@@ -4,6 +4,8 @@ Astro **Major Tom** is an opinionated Astro 5 starter template with built-in sup
 
 Using `create-astro@latest` provides everything you need to create a basic Astro application. However, it is missing a few useful items that I found myself manually adding to every Astro project I created.  To address this problem, I created this template to automatically include these items. Additionally, a custom [PowerShell function](https://github.com/Smart-Ace-Designs/SmartAceDesigns.AstroLiftoff) (also available in a PowerShell module) was created to deploy this template and provide additional functionality that the template cannot.
 
+This provides a great starting point for a brand new Astro project with Tailwind.
+
 The template includes:
 - [Tailwind CSS v4.1](https://tailwindcss.com/)
 - [Prettier](https://prettier.io/)
@@ -23,7 +25,6 @@ The PowerShell function:
 - Automatically navigates to the project folder and peforms an initial install
 - Runs `astro update` to update the core Astro packages to the latest versions and runs your preferred package manager (npm or bun) to update the other packages
 - Provides an option to launch the site and/or open the project folder with VS Code post deployment
-
 
 ## Deployment Methods
 ### bun
