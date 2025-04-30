@@ -1,8 +1,8 @@
 # Astro Template: Major Tom
 
-**Major Tom** is an opinionated Astro 5 starter template with built-in support for Tailwind CSS, Prettier, view transitions, and import aliases and includes a basic starter component.
+Astro **Major Tom** is an opinionated Astro 5 starter template with built-in support for Tailwind CSS, Prettier, view transitions, and import aliases and includes a basic starter component.
 
-Using `bunx create-astro@latest` or `npx create-astro@latest` provides everything you need to create a basic Astro application. However, it is missing a few useful items that I found myself manually adding to every Astro project I created.  To address this problem, I created this template to automatically include these items. Additionally, a custom PowerShell function was created to deploy this template and provide some additional functionality that the template cannot.
+Using `create-astro@latest` provides everything you need to create a basic Astro application. However, it is missing a few useful items that I found myself manually adding to every Astro project I created.  To address this problem, I created this template to automatically include these items. Additionally, a custom [PowerShell function](https://github.com/Smart-Ace-Designs/SmartAceDesigns.AstroLiftoff) (also available in a PowerShell module) was created to deploy this template and provide additional functionality that the template cannot.
 
 The template includes:
 - [Tailwind CSS v4.1](https://tailwindcss.com/)
@@ -33,6 +33,14 @@ bunx create-astro@latest -- --template smart-ace-designs/astro-major-tom project
 ### npm
 ```sh
 npx create-astro@latest -- --template smart-ace-designs/astro-major-tom project-name
+```
+### pnpm
+```sh
+pnpm create astro@latest --template smart-ace-designs/astro-major-tom project-name
+```
+### yarn
+```sh
+yarn create astro@latest --template smart-ace-designs/astro-major-tom project-name
 ```
 ### PowerShell
 A PowerShell module or a standalone function is available here:
