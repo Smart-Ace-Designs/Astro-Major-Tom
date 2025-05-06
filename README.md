@@ -52,7 +52,7 @@ New-AstroProject -ProjectName project-name -Location parent-directory -Template 
 https://github.com/user-attachments/assets/0a5886fd-34a7-4409-99d6-a056329f1d4c
 
 ## Project Structure
-After deploying the Astro **Moon Base** template you will see the following files and directories in your project root:
+After deploying the Astro **Major Tom** template you will see the following files and directories in your project root:
 
 ```text
 /
