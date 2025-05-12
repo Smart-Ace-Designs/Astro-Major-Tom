@@ -63,13 +63,13 @@ After deploying the Astro **Major Tom** template you will see the following file
 ├── public/
 │   └── favicon.svg
 ├── src/
-|   ├── components/
+│   ├── components/
 │   │   └── AstroWelcome.astro
-|   ├── layouts/
+│   ├── layouts/
 │   │   └── MainLayout.astro
 │   ├── pages/
 │   │   └── index.astro
-|   └── styles/
+│   └── styles/
 │       └── global.css
 ├── .gitignore
 ├── .prettierrc.mjs
