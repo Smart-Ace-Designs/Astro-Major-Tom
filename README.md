@@ -49,7 +49,7 @@ The optional PowerShell function and module are available here:
 New-AstroProject -ProjectName project-name -Location parent-directory -Template astro-major-tom
 ```
 
-https://github.com/user-attachments/assets/0a5886fd-34a7-4409-99d6-a056329f1d4c
+https://github.com/user-attachments/assets/85b9db02-0d89-4abd-9059-ac8b4b5c93e3
 
 ## Project Structure
 After deploying the Astro **Major Tom** template you will see the following files and directories in your project root:
