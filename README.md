@@ -57,19 +57,19 @@ After deploying the Astro **Major Tom** template you will see the following file
 ```text
 /
 ├── .vscode/
-│       └── extensions.json
-│       └── launch.json
-│       └── settings.json
+│   ├── extensions.json
+│   ├── launch.json
+│   └── settings.json
 ├── public/
-│       └── favicon.svg
+│   └── favicon.svg
 ├── src/
 |   ├── components/
-│       └── AstroWelcome.astro
+│   │   └── AstroWelcome.astro
 |   ├── layouts/
-│       └── MainLayout.astro
+│   │   └── MainLayout.astro
 │   ├── pages/
-│       └── index.astro
-|   ├── styles/
+│   │   └── index.astro
+|   └── styles/
 │       └── global.css
 ├── .gitignore
 ├── .prettierrc.mjs
