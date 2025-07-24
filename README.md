@@ -1,3 +1,4 @@
+<!-- ASTRO:REMOVE:START -->
 # Astro Template: Major Tom
 Astro **Major Tom** is an opinionated Astro 5 starter template with built-in support for Tailwind CSS, Prettier, view transitions, and import aliases and includes a basic starter component.
 
@@ -86,3 +87,4 @@ The optional `New-AstroProject` PowerShell function will add this additional dir
 └── src/
     └── assets/
 ```
+<!-- ASTRO:REMOVE:END -->
