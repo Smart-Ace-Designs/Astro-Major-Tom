@@ -87,6 +87,7 @@ After deploying the Astro **Major Tom** template you will see the following file
 │   └── styles/
 │       └── global.css
 ├── .gitignore
+├── .prettierignore
 ├── .prettierrc.mjs
 ├── astro.config.mjs
 ├── package.json
