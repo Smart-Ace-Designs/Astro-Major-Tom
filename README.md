@@ -2,16 +2,16 @@
 
 # Astro Template: Major Tom
 
-Astro **Major Tom** is an opinionated Astro 5 starter template with built-in support for Tailwind CSS, Prettier, view transitions, and aliases.
+Astro **Major Tom** is an opinionated Astro 6 starter template with built-in support for Tailwind CSS, Prettier, view transitions, and aliases.
 
-Using `create astro@latest` provides everything you need to create a basic Astro 5 application. However, it is missing a few useful items that you might find yourself manually adding to every new Astro project. The **Major Tom** template was created to automatically include these items plus a starter `AstroWelcome` component to showcase Tailwind. This provides a great starting point with sample code for a new Astro 5 project with Tailwind.
+Using `create astro@latest` provides everything you need to create a basic Astro 6 application. However, it is missing a few useful items that you might find yourself manually adding to every new Astro 6 project. The **Major Tom** template was created to automatically include these items plus a starter `AstroWelcome` component to showcase Tailwind. This provides a great starting point with sample code for a new Astro 6 project with Tailwind.
 
 The template includes:
 
 - An initial Astro project structure
 - Astro [View Transitions](https://docs.astro.build/en/guides/view-transitions/)
 - Astro [Aliases](https://docs.astro.build/en/guides/imports/#aliases)
-- [Tailwind CSS v4.1](https://tailwindcss.com/)
+- [Tailwind CSS v4.2](https://tailwindcss.com/)
 - [Prettier](https://prettier.io/)
 - A default _MainLayout.astro_ layout file
 - A default _global.css_ file
@@ -39,7 +39,7 @@ npm create astro@latest -- --template smart-ace-designs/astro-major-tom project-
 ### bun
 
 ```sh
-bun create astro@latest -- --template smart-ace-designs/astro-major-tom project-name
+bun --bun create astro@latest -- --template smart-ace-designs/astro-major-tom project-name
 ```
 
 ### pnpm
@@ -76,6 +76,7 @@ After deploying the Astro **Major Tom** template you will see the following file
 │   ├── launch.json
 │   └── settings.json
 ├── public/
+│   ├── favicon.ico
 │   └── favicon.svg
 ├── src/
 │   ├── components/
@@ -84,8 +85,9 @@ After deploying the Astro **Major Tom** template you will see the following file
 │   │   └── MainLayout.astro
 │   ├── pages/
 │   │   └── index.astro
-│   └── styles/
-│       └── global.css
+│   ├── styles/
+│   │   └── global.css
+│   └── content.config.ts
 ├── .gitignore
 ├── .prettierignore
 ├── .prettierrc.mjs
