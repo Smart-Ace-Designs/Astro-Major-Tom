@@ -12,9 +12,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.2.2",
+    "@tailwindcss/vite": "^4.2.3",
     "astro": "^6.1.8",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.2.3"
   },
   "devDependencies": {
     "prettier": "^3.8.3",
