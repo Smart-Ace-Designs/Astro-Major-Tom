@@ -85,9 +85,8 @@ After deploying the Astro **Major Tom** template you will see the following file
 │   │   └── MainLayout.astro
 │   ├── pages/
 │   │   └── index.astro
-│   ├── styles/
-│   │   └── global.css
-│   └── content.config.ts
+│   └── styles/
+│       └── global.css
 ├── .gitignore
 ├── .prettierignore
 ├── .prettierrc.mjs
