@@ -3,6 +3,5 @@
     "astro-build.astro-vscode",
     "esbenp.prettier-vscode",
     "bradlc.vscode-tailwindcss"
-  ],
-  "unwantedRecommendations": []
+  ]
 }
