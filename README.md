@@ -2,13 +2,13 @@
 
 # Astro Template: Major Tom
 
-Astro **Major Tom** is an opinionated [Astro 6](https://astro.build/) starter template with built-in support for Tailwind CSS, Prettier, view transitions, and aliases.
+Astro **Major Tom** is an opinionated [Astro 7](https://astro.build/) starter template with built-in support for Tailwind CSS, Prettier, view transitions, and aliases.
 
-Using `create astro@latest` provides everything you need to create a basic Astro 6 application. However, it is missing a few useful items that you might find yourself manually adding to every new Astro 6 project. The **Major Tom** template was created to automatically include these items plus a starter `AstroWelcome` component to showcase Tailwind. This provides a great starting point with sample code for a new Astro 6 project with Tailwind.
+Using `create astro@latest` provides everything you need to create a basic Astro 7 application. However, it is missing a few useful items that you might find yourself manually adding to every new Astro 7 project. The **Major Tom** template was created to automatically include these items plus a starter `AstroWelcome` component to showcase Tailwind. This provides a great starting point with sample code for a new Astro 7 project with Tailwind.
 
 The template includes:
 
-- An initial Astro project structure
+- An initial Astro 7 project structure
 - Astro [View Transitions](https://docs.astro.build/en/guides/view-transitions/)
 - Astro [Aliases](https://docs.astro.build/en/guides/imports/#aliases)
 - [Tailwind CSS](https://tailwindcss.com/)
@@ -70,7 +70,9 @@ After deploying the Astro **Major Tom** template you will see the following file
 ├── .gitignore
 ├── .prettierignore
 ├── .prettierrc.mjs
+├── AGENTS.md
 ├── astro.config.mjs
+├── CLAUDE.md
 ├── package.json
 ├── README.md
 └── tsconfig.json
