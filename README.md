@@ -2,32 +2,30 @@
 
 # Astro Template: Major Tom
 
-Astro **Major Tom** is an opinionated [Astro 7](https://astro.build/) starter template with built-in support for Tailwind CSS 4, Prettier, view transitions, and aliases.
+Astro **Major Tom** is an opinionated [Astro](https://astro.build/) starter template with built-in support for Tailwind CSS, Prettier, view transitions, and aliases.
 
-Using `create astro@latest` provides everything you need to create a basic Astro 7 application. However, it is missing a few useful items that you might find yourself manually adding to every new Astro 7 project. The **Major Tom** template was created to automatically include these items plus a starter `AstroWelcome` component to showcase Tailwind. This provides a great starting point with sample code for a new Astro 7 project with Tailwind CSS 4.
+Using `create astro@latest` provides everything you need to create a basic Astro application. However, it is missing a few useful items that you might find yourself manually adding to every new Astro project. The **Major Tom** template was created to automatically include these items plus a starter `AstroWelcome` component to showcase Tailwind. This provides a great starting point with sample code for a new Astro project with Tailwind CSS.
 
 The template includes:
 
-- An initial Astro 7 project structure
+- An initial Astro project structure
 - Astro [View Transitions](https://docs.astro.build/en/guides/view-transitions/)
 - Astro [Aliases](https://docs.astro.build/en/guides/imports/#aliases)
-- [Tailwind CSS 4](https://tailwindcss.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 - [Prettier](https://prettier.io/)
+- Default _.vscode_ files to properly handle Tailwind CSS, recommended extensions, and default Prettier formatters
 - A default _MainLayout.astro_ layout file
 - A default _global.css_ file
-- Default _.vscode_ files to properly handle Tailwind CSS, recommended extensions, and default Prettier formatters
+- A blank _README.md_ file
 - A starter component to showcase Tailwind CSS
 - The `dev` script set to `"astro dev --open"`
 
 ## Deployment Methods
 
->[!note]
->The `AGENTS.md` and `CLAUDE.md` files will be created automatically by the `create astro@latest` npm initializer. Use the `--no-ai` flag to opt out of creating these files.
-
 ### npm
 
 ```sh
-npm create astro@latest -- --template smart-ace-designs/astro-major-tom project-name
+npm create astro@latest -q -- --template smart-ace-designs/astro-major-tom project-name
 ```
 
 ### bun
@@ -75,7 +73,6 @@ After deploying the Astro **Major Tom** template you will see the following file
 ├── .prettierrc.mjs
 ├── AGENTS.md
 ├── astro.config.mjs
-├── CLAUDE.md
 ├── package.json
 ├── README.md
 └── tsconfig.json
