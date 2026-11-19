@@ -2,6 +2,7 @@ import type { Config } from "prettier";
 import type { PluginOptions } from "prettier-plugin-tailwindcss";
 
 const config: Config & PluginOptions = {
+  printWidth: 80,
   plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
   tailwindStylesheet: "src/styles/global.css",
   overrides: [
