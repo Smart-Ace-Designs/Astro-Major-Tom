@@ -70,10 +70,10 @@ After deploying the Astro **Major Tom** template you will see the following file
 │       └── global.css
 ├── .gitignore
 ├── .prettierignore
-├── .prettierrc.mjs
 ├── AGENTS.md
 ├── astro.config.mjs
 ├── package.json
+├── prettier.config.ts
 ├── README.md
 └── tsconfig.json
 ```
